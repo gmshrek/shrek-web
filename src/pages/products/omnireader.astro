@@ -1,0 +1,232 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+// 未来可以为每个产品创建更详细的组件
+const appName = "OmniReader";
+const appTagline = "Smart & Versatile eBook Reader, AI-powered, supports all major formats, and designed for efficiency.";
+const appStoreLink = "https://apps.apple.com/app/id1510511137?mt=12"; // 替换
+---
+
+<MainLayout title={appName} description={appTagline}>
+  <article class="product-detail">
+    <header class="product-header">
+      <img
+        src="/icons/omnireader-icon.png"
+        alt={`${appName} Icon`}
+        class="product-detail-icon"
+      />
+      {/* 替换 */}
+      <div>
+        <h1>{appName}</h1>
+        <p class="tagline">{appTagline}</p>
+        <p class="intro">
+          A Powerful AI-Enhanced Reading Experience<br />
+          OmniReader is a feature-rich book reader designed for users who demand flexibility, efficiency, and intelligence in their reading experience. With broad format support, AI-powered assistance, and advanced customization options, it's the ultimate tool for reading and managing digital content.
+        </p>
+        {
+          appStoreLink && (
+            <a
+              href={appStoreLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="app-store-button-detail"
+            >
+              <svg
+                width="160"
+                height="48"
+                viewBox="0 0 160 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                style="display: block;"
+              >
+                <rect width="160" height="48" rx="12" fill="#000" />
+                <g>
+                  <svg x="16" y="10" width="28" height="28" viewBox="0 0 28 28">
+                    <path
+                      d="M19.7 14.6c0-3.1 2.5-4.6 2.6-4.7-1.4-2-3.6-2.3-4.4-2.3-1.9-.2-3.7 1.1-4.7 1.1-1 0-2.5-1.1-4.1-1.1-2.1 0-4 1.2-5.1 3.1-2.2 3.8-.6 9.4 1.6 12.5 1.1 1.6 2.4 3.3 4.1 3.2 1.6-.1 2.2-1 4.1-1 1.9 0 2.4.9 4.1 1 1.7.1 2.8-1.6 3.9-3.2.7-1 1-2 1.1-2.1-.1 0-2.6-1-2.6-4.1z"
+                      fill="#fff"
+                    />
+                    <path
+                      d="M16.7 7.2c.8-1 1.3-2.3 1.1-3.6-1.1.1-2.4.7-3.1 1.6-.7.8-1.3 2.2-1.1 3.5 1.2.1 2.4-.6 3.1-1.5z"
+                      fill="#fff"
+                    />
+                  </svg>
+                  <text
+                    x="52"
+                    y="20"
+                    fill="#fff"
+                    font-size="10"
+                    font-family="Arial, Helvetica, sans-serif"
+                    font-weight="400"
+                  >
+                    Download on the
+                  </text>
+                  <text
+                    x="52"
+                    y="36"
+                    fill="#fff"
+                    font-size="18"
+                    font-family="Arial, Helvetica, sans-serif"
+                    font-weight="700"
+                  >
+                    App Store
+                  </text>
+                </g>
+              </svg>
+            </a>
+          )
+        }
+      </div>
+    </header>
+
+    <section class="product-visuals">
+      <h2>Key Features</h2>
+      <ul class="feature-list">
+        <li><strong>AI Reading Assistant:</strong> Powered by the full-version DeepSeek-R1 model, providing intelligent reading support. Users can also integrate their own AI models for a highly personalized experience.</li>
+        <li><strong>Comprehensive Format Support:</strong> Read EPUB, PDF, Kindle (MOBI, AZW3, PRC, TPZ, AZW, AZW4, AZS, AZL), CHM, RTF, DJVU, FB2, TXT, HTML, MHTML and more.</li>
+        <li><strong>Advanced Search:</strong> Search within a single page or across the entire document, with highlighted results for quick reference.</li>
+        <li><strong>Annotations & Bookmarks:</strong> Add highlights, notes, and bookmarks to keep track of important information.</li>
+        <li><strong>Smart Navigation:</strong> Easily browse through reading history, jump between pages, and adjust page layouts.</li>
+        <li><strong>Customization & Dark Mode:</strong> Customize fonts, colors, and themes for an optimized reading experience.</li>
+        <li><strong>Text-to-Speech:</strong> Listen to your books with AI-powered voice reading. Read where you click, so that your learning efficiency is greatly improved.</li>
+        <li><strong>File Conversion & Image Extraction:</strong> Export files to EPUB, PDF, HTML or TXT, and extract images from documents.</li>
+        <li><strong>Organized Bookshelf:</strong> Automatically saves reading progress, supports search, sorting, renaming, and folder management.</li>
+        <li><strong>Printing Support:</strong> Print pages directly from the app.</li>
+        <li><strong>Multilingual & Encoding Support:</strong> Read content in Simplified or Traditional Chinese with proper encoding to prevent text issues.</li>
+        <li><strong>Simplified/Traditional Chinese Conversion:</strong> Seamlessly switch between Simplified and Traditional Chinese.</li>
+      </ul>
+    </section>
+
+    <section class="product-visuals">
+      <h2>Keyboard Shortcuts for Efficiency</h2>
+      <ul class="shortcut-list">
+        <li><b>H</b> / <b>Left Arrow</b> – Previous chapter</li>
+        <li><b>L</b> / <b>Right Arrow</b> – Next chapter</li>
+        <li><b>J</b> – Scroll down</li>
+        <li><b>K</b> – Scroll up</li>
+        <li><b>Spacebar</b> – Scroll to the next page</li>
+        <li><b>T</b> – Toggle left sidebar</li>
+        <li><b>I</b> – Toggle immersive mode</li>
+        <li><b>B</b> – Toggle bottom toolbar</li>
+      </ul>
+    </section>
+
+    <section class="call-to-action-bottom">
+      <h3>Ready to experience smart reading?</h3>
+      {
+        appStoreLink && (
+          <a
+            href={appStoreLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="cta-button"
+          >
+            Download OmniReader on the App Store
+          </a>
+        )
+      }
+    </section>
+  </article>
+</MainLayout>
+
+<style>
+  .product-detail {
+    padding: 1rem;
+  }
+  .product-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    background-color: #f9f9f9; /* 轻微背景 */
+    padding: 2rem;
+    border-radius: 8px;
+  }
+  .product-detail-icon {
+    width: 150px; /* 调整图标大小 */
+    height: 150px;
+    object-fit: contain;
+  }
+  .product-header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .tagline {
+    font-size: 1.08rem;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  .intro {
+    color: #444;
+    font-size: 1.08rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
+  }
+  .app-store-button-detail svg {
+    height: 48px;
+    margin-top: 0.5rem;
+  }
+
+  .product-visuals {
+    margin-bottom: 3rem;
+  }
+  .product-visuals h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .feature-list {
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    padding-left: 1.2rem;
+    font-size: 1.08rem;
+    line-height: 1.8;
+  }
+  .feature-list li {
+    margin-bottom: 0.5rem;
+  }
+  .shortcut-list {
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto 2rem auto;
+    padding-left: 1.2rem;
+    font-size: 1.08rem;
+    line-height: 1.8;
+  }
+  .shortcut-list li {
+    margin-bottom: 0.3rem;
+  }
+  .feature-desc {
+    text-align: center;
+    color: #444;
+    font-size: 1.08rem;
+    margin-bottom: 1.5rem;
+  }
+  .call-to-action-bottom {
+    text-align: center;
+    padding: 2rem;
+    background-color: #409EFF;
+    color: white;
+    border-radius: 8px;
+  }
+  .call-to-action-bottom h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+  }
+  .call-to-action-bottom .cta-button {
+    display: inline-block;
+    background: #fff;
+    color: #409EFF;
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 0.8rem 2.2rem;
+    font-size: 1.08rem;
+    text-decoration: none;
+    margin-top: 0.5rem;
+    transition: background 0.18s, color 0.18s;
+  }
+  .call-to-action-bottom .cta-button:hover {
+    background: #e6f0fa;
+    color: #1769c2;
+  }
+</style>

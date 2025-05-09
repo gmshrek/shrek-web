@@ -1,0 +1,123 @@
+---
+// src/components/Header.astro
+const brandName = "GM Shrek";
+---
+
+<header>
+  <nav>
+    <a href="/" class="brand">{brandName}</a>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li class="dropdown">
+        {/* 父元素 */}
+        <a href="#">Products</a>
+        {/* 这个 a 标签本身不应该控制显示，而是父 li:hover 控制 */}
+        <ul class="dropdown-menu">
+          {/* 下拉菜单 */}
+          <li><a href="/products/omnireader">OmniReader</a></li>
+          <li><a href="/products/mouseboost">MouseBoost</a></li>
+          <li><a href="/products/omnizip">OmniZip</a></li>
+        </ul>
+      </li>
+      <li><a href="/feedback">Feedback</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  header {
+    background-color: #fff;
+    border-bottom: 1px solid #e9ecef;
+    padding: 1rem 0;
+  }
+  nav {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+  }
+  .brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  nav > ul {
+    /* 只影响主导航的 ul，不影响下拉菜单的 ul */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  nav > ul > li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    display: block;
+    padding: 0.5rem;
+    transition: color 0.2s;
+  }
+  nav > ul > li a:hover {
+    color: #007bff;
+  }
+  .dropdown {
+    position: relative;
+  }
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+    background: #fff;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.1);
+    z-index: 20;
+    min-width: 180px;
+    padding: 6px 0;
+    list-style: none;
+    margin: 0;
+    border-radius: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.18s cubic-bezier(.4,0,.2,1), transform 0.18s cubic-bezier(.4,0,.2,1);
+  }
+  .dropdown:hover .dropdown-menu,
+  .dropdown:focus-within .dropdown-menu {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) scale(1);
+  }
+  .dropdown-menu li {
+    padding: 0;
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .dropdown-menu li:last-child {
+    border-bottom: none;
+  }
+  .dropdown-menu li a {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 36px;
+    color: #333;
+    text-decoration: none;
+    white-space: nowrap;
+    font-weight: 400;
+    font-size: 15px;
+    width: 100%;
+    border-radius: 4px;
+    text-align: left;
+    transition: background 0.18s, color 0.18s;
+  }
+  .dropdown-menu li a:hover, .dropdown-menu li a:focus {
+    background: #f5f7fa;
+    color: #409EFF;
+  }
+</style>

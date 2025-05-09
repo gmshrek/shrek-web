@@ -1,0 +1,34 @@
+---
+// src/components/FeedbackForm.astro
+const tallyFormEmbedCode = `
+    <iframe
+        data-tally-src="YOUR_TALLY_FORM_SHARE_LINK"
+        loading="lazy"
+        width="100%"
+        height="500"  /* 调整高度 */
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        title="Feedback Form for Shrek Apps">
+    </iframe>
+    <script>
+    var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}
+    </script>
+`;
+// 注意：上面的 script 部分是 Tally 官方提供的加载脚本，确保它能正确执行。
+// Astro 在处理 script 标签时有特殊方式，确保它被正确渲染。
+// 对于外部脚本，通常 Astro 会自动处理。如果遇到问题，可能需要 is:inline。
+// 但对于 Tally 的嵌入，直接粘贴其 iframe 和 script 通常是可行的。
+---
+<div class="tally-form-container" set:html={tallyFormEmbedCode} />
+
+<style>
+    .tally-form-container {
+        max-width: 700px;
+        margin: 2rem auto;
+        border: 1px solid #ddd; /* 可选边框 */
+        border-radius: 8px;
+        overflow: hidden; /* 确保 iframe 圆角生效 */
+    }
+    /* 你可能需要调整 iframe 的高度 */
+</style>

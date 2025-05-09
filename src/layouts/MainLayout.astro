@@ -1,0 +1,55 @@
+---
+// src/layouts/MainLayout.astro
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+// 可以导入全局 CSS 文件
+import '../styles/global.css';
+
+export interface Props {
+    title: string;
+    description?: string; // 可选的页面描述
+}
+
+const { title, description } = Astro.props;
+---
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content={Astro.generator}>
+    <title>{title} - Shrek Apps</title>
+    {description && <meta name="description" content={description}>}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"> {/* 替换为您自己的 favicon */}
+    <meta name="theme-color" content="#0ea5e9">
+    <script>
+        // 检查用户系统主题偏好
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+    {/* 未来可以添加 SEO 相关的 meta 标签 */}
+</head>
+<body class="antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    <Header />
+    <main>
+        <slot /> {/* 页面内容将插入此处 */}
+    </main>
+    <Footer />
+    <style is:global>
+        /* 可以在这里写一些全局的 CSS reset 或基础样式 */
+        body {
+            font-family: system-ui, sans-serif;
+            margin: 0;
+            background-color: #f8f9fa; /* 示例背景色 */
+            color: #212529; /* 示例文字颜色 */
+        }
+        main {
+            max-width: 1000px; /* 限制内容区域宽度 */
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+    </style>
+</body>
+</html>

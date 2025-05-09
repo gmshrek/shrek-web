@@ -1,0 +1,195 @@
+---
+// src/pages/index.astro
+import MainLayout from "../layouts/MainLayout.astro";
+import ProductCard from "../components/ProductCard.astro"; // 我们稍后创建
+import FeedbackForm from "../components/FeedbackForm.astro"; // 我们稍后创建
+
+const products = [
+  {
+    name: "MouseBoost",
+    icon: "/icons/mouseboost-icon.png", // 替换
+    tagline: "30+ handy tools at your right-click. Boost your Mac productivity with a customizable context menu for everyone.",
+    url: "/products/mouseboost",
+    appStoreUrl: "YOUR_MOUSEBOOST_APP_STORE_LINK" // 替换
+  },
+  {
+    name: "OmniReader",
+    icon: "/icons/omnireader-icon.png", // 替换为您的图标路径
+    tagline: "AI-powered reading, tailored for you. Supports all major eBook formats, advanced search, annotation.",
+    url: "/products/omnireader",
+    appStoreUrl: "https://apps.apple.com/app/id1510511137?mt=8", // 替换
+  },
+  {
+    name: "OmniZip",
+    icon: "/icons/omnizip-icon.png", // 替换
+    tagline: "Effortless file compression and extraction. Supports 100+ formats including RAR, 7Z, ZIP, and more.",
+    url: "/products/omnizip",
+    appStoreUrl: "https://apps.apple.com/app/id6446939321?mt=8", // 替换
+  },
+];
+---
+
+<MainLayout
+  title="Welcome"
+  description="Discover powerful and elegant macOS apps by Shrek."
+>
+  <section
+    class="relative min-h-[80vh] flex items-center justify-center bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900 dark:to-primary-800 overflow-hidden"
+  >
+    <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+    <div
+      class="container mx-auto px-4 text-center relative z-10 animate-fade-in"
+    >
+      <h1
+        class="text-5xl md:text-6xl font-bold text-primary-900 dark:text-white mb-6"
+      >
+        Crafting Powerful & Elegant macOS Apps
+      </h1>
+      <p
+        class="text-xl md:text-2xl text-primary-700 dark:text-primary-200 max-w-3xl mx-auto mb-8"
+      >
+        Elevate Your Mac Experience with Shrek Apps. Discover a suite of
+        meticulously designed applications to boost your productivity and
+        streamline your workflow on macOS.
+      </p>
+      <a
+        href="#apps-section"
+        class="inline-block px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg shadow-lg transform transition hover:scale-105 duration-200"
+      >
+        Explore Our Apps
+      </a>
+    </div>
+  </section>
+
+  <section id="apps-section" class="py-20 bg-white dark:bg-gray-900">
+    <div class="container mx-auto px-4">
+      <h2
+        class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12"
+      >
+        Our Applications
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {
+          products.map((product, index) => (
+            <div
+              class="animate-slide-up"
+              style={`animation-delay: ${index * 100}ms`}
+            >
+              <ProductCard
+                name={product.name}
+                icon={product.icon}
+                tagline={product.tagline}
+                url={product.url}
+                appStoreUrl={product.appStoreUrl}
+              />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-gray-50 dark:bg-gray-800">
+    <div class="container mx-auto px-4">
+      <h2
+        class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12"
+      >
+        Why Choose Our Apps?
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div
+          class="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg transform transition hover:scale-105 duration-200"
+        >
+          <div
+            class="w-12 h-12 bg-primary-100 dark:bg-primary-800 rounded-lg flex items-center justify-center mb-6"
+          >
+            <svg
+              class="w-6 h-6 text-primary-600 dark:text-primary-300"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            Focus on macOS Native Experience
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            Apps designed to feel right at home on your Mac.
+          </p>
+        </div>
+        <div
+          class="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg transform transition hover:scale-105 duration-200"
+        >
+          <div
+            class="w-12 h-12 bg-primary-100 dark:bg-primary-800 rounded-lg flex items-center justify-center mb-6"
+          >
+            <svg
+              class="w-6 h-6 text-primary-600 dark:text-primary-300"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            Clean & Efficient Design
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            Intuitive interfaces that get out of your way.
+          </p>
+        </div>
+        <div
+          class="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg transform transition hover:scale-105 duration-200"
+        >
+          <div
+            class="w-12 h-12 bg-primary-100 dark:bg-primary-800 rounded-lg flex items-center justify-center mb-6"
+          >
+            <svg
+              class="w-6 h-6 text-primary-600 dark:text-primary-300"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            Continuous Updates & Support
+          </h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            We're committed to improving our apps and helping you.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .bg-grid-pattern {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.1) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+</style>

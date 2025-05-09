@@ -1,0 +1,14 @@
+<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="symbolSubtleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#34495E; stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#2C3E50; stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+
+  <g id="logo-symbol-standalone" transform="translate(5, 5)">
+    <path d="M45,25 C45,11.19 33.81,0 20,0 L20,0 C8.95,0 0,8.95 0,20 L0,30 C0,41.05 8.95,50 20,50 L35,50 L35,40 L20,40 C14.48,40 10,35.52 10,30 L10,20 C10,14.48 14.48,10 20,10 C27.73,10 35,17.27 35,25 L35,25 L45,25 Z" fill="url(#symbolSubtleGradient)"/>
+    <polygon points="25,20 40,20 40,10 50,25 40,40 40,30 25,30" fill="#FFB300"/>
+    <path d="M35,23 L42,23 L42,27 L35,27 Z" fill="#FFFFFF" opacity="0.1"/>
+  </g>
+</svg>

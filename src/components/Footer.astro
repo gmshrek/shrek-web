@@ -1,0 +1,31 @@
+---
+// src/components/Footer.astro
+const currentYear = new Date().getFullYear();
+const brandName = "Shrek";
+---
+<footer>
+    <p>© {currentYear} {brandName}. All rights reserved.</p>
+    <p>
+        <a href="/privacy">Privacy Policy</a> |
+        <a href="/terms">Terms of Service</a>
+    </p>
+</footer>
+<style>
+    footer {
+        text-align: center;
+        padding: 2rem 0;
+        font-size: 0.9rem;
+        color: #6c757d;
+        border-top: 1px solid #e9ecef;
+        margin-top: 3rem;
+    }
+    footer a {
+        color: #409EFF;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+    footer a:hover {
+        color: #66b1ff;
+        text-decoration: underline;
+    }
+</style>
