@@ -1,26 +1,29 @@
 ---
 import MainLayout from "../../layouts/MainLayout.astro";
-const appName = "OmniZip";
-const appTagline =
-  "A super decompression tool, supports the decompression of RAR, 7Z, ZIP, TAR, GZIP and other more than 100 formats of files. As long as the compressed package, there is nothing OmniZip can not decompress.";
-const appStoreLink = "https://apps.apple.com/app/id6446939321?mt=8"; 
+import { products } from "../../config/products";
+
+const product = products.find(p => p.id === "omnizip");
+if (!product) {
+  return Astro.redirect("/404");
+}
 ---
 
-<MainLayout title={appName} description={appTagline}>
+<MainLayout title={product.name} description={product.tagline}>
   <article class="product-detail">
     <header class="product-header">
       <img
-        src="/icons/omnizip-icon.png"
-        alt={`${appName} Icon`}
+        src={product.icon}
+        alt={`${product.name} Icon`}
         class="product-detail-icon"
       />
       <div>
-        <h1>{appName}</h1>
-        <p class="tagline">{appTagline}</p>
+        <h1>{product.name}</h1>
+        <p class="tagline">{product.tagline}</p>
+        <p class="intro">{product.description}</p>
         {
-          appStoreLink && (
+          product.appStoreUrl && (
             <a
-              href={appStoreLink}
+              href={product.appStoreUrl}
               target="_blank"
               rel="noopener noreferrer"
               class="app-store-button-detail"
@@ -74,122 +77,103 @@ const appStoreLink = "https://apps.apple.com/app/id6446939321?mt=8";
     </header>
 
     <section class="product-visuals">
-      <h2>Features</h2>
+      <h2>Key Features</h2>
       <ul class="feature-list">
-        <li><strong>Double-click to preview or decompress:</strong> You can customize the configuration.</li>
-        <li><strong>Compress selected files:</strong> Select a file and then compress it.</li>
-        <li><strong>Drag and unzip:</strong> Supports drag and unzip files directly.</li>
-        <li><strong>Batch decompression:</strong> Supports batch decompression.</li>
-        <li><strong>Volume package support:</strong> Supports decompression of the decompressed volume package, ensuring that the compressed file of the volume is in the same directory.</li>
-        <li><strong>Compression formats:</strong> Supports zip and 7z.</li>
-        <li><strong>Encryption & volume separation:</strong> Supports encryption compression and volume separation compression.</li>
-        <li><strong>Custom filter files:</strong> Supports user-defined compression and decompression of filter files.</li>
-        <li><strong>Preview history:</strong> Supports recording previewed compressed files for next operation.</li>
+        {product.features.map((feature) => (
+          <li>
+            <strong>{feature.title}:</strong> {feature.description}
+          </li>
+        ))}
       </ul>
-      <div class="feature-desc">
-        <p>OmniZip makes decompression and compression on Mac simple, powerful, and efficient. No matter what format, just use OmniZip!</p>
-      </div>
-    </section>
-
-    <section class="call-to-action-bottom">
-      <h3>Ready to supercharge your file management?</h3>
-      {
-        appStoreLink && (
-          <a
-            href={appStoreLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="cta-button"
-          >
-            Download OmniZip on the App Store
-          </a>
-        )
-      }
     </section>
   </article>
 </MainLayout>
 
 <style>
   .product-detail {
-    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
   }
+
   .product-header {
     display: flex;
-    align-items: center;
     gap: 2rem;
+    align-items: flex-start;
     margin-bottom: 3rem;
-    background-color: #f9f9f9;
-    padding: 2rem;
-    border-radius: 8px;
   }
+
   .product-detail-icon {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     object-fit: contain;
   }
+
   .product-header h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
+    color: #1e293b;
     margin-bottom: 0.5rem;
   }
+
   .tagline {
-    font-size: 1.08rem;
-    color: #555;
+    font-size: 1.25rem;
+    color: #64748b;
     margin-bottom: 1rem;
   }
-  .app-store-button-detail svg {
-    height: 48px;
-    margin-top: 0.5rem;
-  }
-  .product-visuals {
-    margin-bottom: 3rem;
-  }
-  .product-visuals h2 {
-    text-align: center;
-    font-size: 1.5rem;
+
+  .intro {
+    font-size: 1.1rem;
+    color: #475569;
+    line-height: 1.6;
     margin-bottom: 1.5rem;
   }
-  .feature-list {
-    text-align: left;
-    max-width: 700px;
-    margin: 0 auto 2rem auto;
-    padding-left: 1.2rem;
-    font-size: 1.08rem;
-    line-height: 1.8;
+
+  .app-store-button-detail {
+    display: inline-block;
+    margin-top: 1rem;
   }
+
+  .product-visuals {
+    margin-top: 3rem;
+  }
+
+  .product-visuals h2 {
+    font-size: 2rem;
+    color: #1e293b;
+    margin-bottom: 1.5rem;
+  }
+
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
   .feature-list li {
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .feature-list strong {
+    color: #1e293b;
+    display: block;
     margin-bottom: 0.5rem;
   }
-  .feature-desc {
-    text-align: center;
-    color: #444;
-    font-size: 1.08rem;
-    margin-bottom: 1.5rem;
-  }
-  .call-to-action-bottom {
-    text-align: center;
-    padding: 2rem;
-    background-color: #409EFF;
-    color: white;
-    border-radius: 8px;
-  }
-  .call-to-action-bottom h3 {
-    font-size: 1.3rem;
-    margin-bottom: 1.2rem;
-  }
-  .call-to-action-bottom .cta-button {
-    display: inline-block;
-    background: #fff;
-    color: #409EFF;
-    font-weight: 700;
-    border-radius: 8px;
-    padding: 0.8rem 2.2rem;
-    font-size: 1.08rem;
-    text-decoration: none;
-    margin-top: 0.5rem;
-    transition: background 0.18s, color 0.18s;
-  }
-  .call-to-action-bottom .cta-button:hover {
-    background: #e6f0fa;
-    color: #1769c2;
+
+  @media (max-width: 768px) {
+    .product-header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .product-detail-icon {
+      margin-bottom: 1rem;
+    }
   }
 </style>
