@@ -1,0 +1,192 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="CogniPDF X - Powerful PDF Reader for macOS"
+  description="A powerful PDF reader with bookshelves, reading progress tracking, annotations, themes, TTS, and immersive reading mode. Your complete PDF management solution."
+>
+  <div class="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900 dark:to-primary-800">
+    <!-- Hero Section -->
+    <section class="container mx-auto px-4 py-20">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="flex-1 text-center md:text-left">
+          <h1 class="text-5xl font-bold text-primary-900 dark:text-white mb-6">
+            CogniPDF X
+          </h1>
+          <p class="text-xl text-primary-700 dark:text-primary-200 mb-8">
+            A powerful PDF reader that transforms how you read and manage your documents. 
+            Experience a new level of reading comfort with our comprehensive feature set.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <a
+              href="https://apps.apple.com/app/id6496689357?mt=8"
+              class="inline-flex items-center justify-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg shadow-lg transform transition hover:scale-105 duration-200"
+            >
+              Download on Mac App Store
+            </a>
+          </div>
+        </div>
+        <div class="flex-1">
+          <img
+            src="/screenshots/cognipdf-hero.png"
+            alt="CogniPDF X Interface"
+            class="rounded-lg shadow-2xl"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="container mx-auto px-4 py-20">
+      <h2 class="text-4xl font-bold text-center text-primary-900 dark:text-white mb-16">
+        Powerful Features for Better Reading
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Bookshelves -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <div class="w-12 h-12 bg-primary-100 dark:bg-primary-800 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Smart Bookshelves</h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            Organize your PDFs with customizable bookshelves. Keep track of what you've read and what's next on your list.
+          </p>
+        </div>
+
+        <!-- Reading Progress -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <div class="w-12 h-12 bg-primary-100 dark:bg-primary-800 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Reading Progress Tracking</h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            Automatically remembers where you left off. Never lose your place in a document again.
+          </p>
+        </div>
+
+        <!-- Annotations -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <div class="w-12 h-12 bg-primary-100 dark:bg-primary-800 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Rich Annotations</h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            Highlight, underline, and add notes to your documents. Make your PDFs truly interactive.
+          </p>
+        </div>
+
+        <!-- Themes -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <div class="w-12 h-12 bg-primary-100 dark:bg-primary-800 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Multiple Themes</h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            Choose from various themes to match your reading environment. Perfect for day and night reading.
+          </p>
+        </div>
+
+        <!-- Immersive Mode -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <div class="w-12 h-12 bg-primary-100 dark:bg-primary-800 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Immersive Reading</h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            Focus on your content with distraction-free immersive reading mode.
+          </p>
+        </div>
+
+        <!-- TTS -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <div class="w-12 h-12 bg-primary-100 dark:bg-primary-800 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Text-to-Speech</h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            Listen to your documents with high-quality text-to-speech functionality.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Features -->
+    <section class="container mx-auto px-4 py-20 bg-white dark:bg-gray-900">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
+          More Features to Enhance Your Reading Experience
+        </h2>
+        <ul class="space-y-6">
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-400 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-600 dark:text-gray-300">Status bar window reading mode for quick reference</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-400 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-600 dark:text-gray-300">Full-text search across all your documents</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-400 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-600 dark:text-gray-300">Smooth scrolling and zooming for comfortable reading</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-400 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-600 dark:text-gray-300">Bookmark management for quick access to important sections</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="container mx-auto px-4 py-20">
+      <div class="bg-primary-600 rounded-2xl p-12 text-center">
+        <h2 class="text-3xl font-bold text-white mb-6">
+          Ready to Transform Your PDF Reading Experience?
+        </h2>
+        <p class="text-primary-100 mb-8 max-w-2xl mx-auto">
+          Download CogniPDF X today and discover a new way to read and manage your PDF documents.
+        </p>
+        <a
+          href="https://apps.apple.com/app/id6496689357?mt=8"
+          class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 font-semibold rounded-lg shadow-lg transform transition hover:scale-105 duration-200"
+        >
+          Download on Mac App Store
+        </a>
+      </div>
+    </section>
+  </div>
+</MainLayout>
+
+<style>
+  .bg-grid-pattern {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.1) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+</style>
