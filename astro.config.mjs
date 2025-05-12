@@ -5,7 +5,7 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://your-domain.com', // 替换为您的实际域名
+  site: 'https://www.shrekcc.top', // 替换为您的实际域名
   compressHTML: true,
   vite: {
     build: {
@@ -18,5 +18,22 @@ export default defineConfig({
     routing: {
       prefixDefaultLocale: false
     }
+  },
+  output: 'static',
+  build: {
+    format: 'directory'
+  },
+  redirects: {
+    '/': '/en',
+    '/privacy': '/en/privacy',
+    '/privacy/': '/en/privacy',
+    '/terms': '/en/terms',
+    '/terms/': '/en/terms',
+    '/contact': '/en/contact',
+    '/contact/': '/en/contact',
+    '/feedback': '/en/feedback',
+    '/feedback/': '/en/feedback',
+    '/about': '/en/about',
+    '/about/': '/en/about'
   }
 });
