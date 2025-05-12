@@ -2,6 +2,7 @@
 // src/components/Header.astro
 import { useTranslations } from '../i18n/ui';
 import { getLangFromUrl } from '../i18n/ui';
+import LanguageSwitcher from './LanguageSwitcher.astro';
 
 const { url } = Astro;
 const lang = getLangFromUrl(url);
@@ -13,24 +14,29 @@ const brandName = "GM Shrek";
 <header>
   <nav>
     <a href={`/${lang}`} class="brand">{brandName}</a>
-    <ul>
-      <li><a href={`/${lang}`}>{t('nav.home')}</a></li>
-      <li class="dropdown">
-        {/* 父元素 */}
-        <a href="#">{t('nav.products')}</a>
-        {/* 这个 a 标签本身不应该控制显示，而是父 li:hover 控制 */}
-        <ul class="dropdown-menu">
-          {/* 下拉菜单 */}
-          <li><a href={`/${lang}/products/omnireader`}>{t('products.omnireader')}</a></li>
-          <li><a href={`/${lang}/products/mouseboost`}>{t('products.mouseboost')}</a></li>
-          <li><a href={`/${lang}/products/omnizip`}>{t('products.omnizip')}</a></li>
-          <li><a href={`/${lang}/products/omniconverter`}>{t('products.omniconverter')}</a></li>
-          <li><a href={`/${lang}/products/cognipdf`}>{t('products.cognipdf')}</a></li>
-          <li><a href={`/${lang}/products/textreader`}>{t('products.textreader')}</a></li>
-        </ul>
-      </li>
-      <li><a href={`/${lang}/feedback`}>{t('nav.feedback')}</a></li>
-    </ul>
+    <div class="nav-container">
+      <ul class="nav-links">
+        <li><a href={`/${lang}`}>{t('nav.home')}</a></li>
+        <li class="dropdown">
+          {/* 父元素 */}
+          <a href="#">{t('nav.products')}</a>
+          {/* 这个 a 标签本身不应该控制显示，而是父 li:hover 控制 */}
+          <ul class="dropdown-menu">
+            {/* 下拉菜单 */}
+            <li><a href={`/${lang}/products/omnireader`}>{t('products.omnireader')}</a></li>
+            <li><a href={`/${lang}/products/mouseboost`}>{t('products.mouseboost')}</a></li>
+            <li><a href={`/${lang}/products/omnizip`}>{t('products.omnizip')}</a></li>
+            <li><a href={`/${lang}/products/omniconverter`}>{t('products.omniconverter')}</a></li>
+            <li><a href={`/${lang}/products/cognipdf`}>{t('products.cognipdf')}</a></li>
+            <li><a href={`/${lang}/products/textreader`}>{t('products.textreader')}</a></li>
+          </ul>
+        </li>
+        <li><a href={`/${lang}/feedback`}>{t('nav.feedback')}</a></li>
+      </ul>
+    </div>
+    <div class="language-switcher">
+      <LanguageSwitcher />
+    </div>
   </nav>
 </header>
 
@@ -54,8 +60,13 @@ const brandName = "GM Shrek";
     text-decoration: none;
     color: #333;
   }
-  nav > ul {
-    /* 只影响主导航的 ul，不影响下拉菜单的 ul */
+  .nav-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 600px;
+  }
+  .nav-links {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -63,7 +74,7 @@ const brandName = "GM Shrek";
     gap: 1.5rem;
     align-items: center;
   }
-  nav > ul > li a {
+  .nav-links > li a {
     text-decoration: none;
     color: #555;
     font-weight: 500;
@@ -71,7 +82,7 @@ const brandName = "GM Shrek";
     padding: 0.5rem;
     transition: color 0.2s;
   }
-  nav > ul > li a:hover {
+  .nav-links > li a:hover {
     color: #007bff;
   }
   .dropdown {
@@ -129,5 +140,11 @@ const brandName = "GM Shrek";
   .dropdown-menu li a:hover, .dropdown-menu li a:focus {
     background: #f5f7fa;
     color: #409EFF;
+  }
+  .language-switcher {
+    position: absolute;
+    right: 15px;
+    display: flex;
+    align-items: center;
   }
 </style>
