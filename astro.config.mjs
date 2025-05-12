@@ -26,14 +26,9 @@ export default defineConfig({
   redirects: {
     '/': '/en',
     '/privacy': '/en/privacy',
-    '/privacy/': '/en/privacy',
     '/terms': '/en/terms',
-    '/terms/': '/en/terms',
     '/contact': '/en/contact',
-    '/contact/': '/en/contact',
     '/feedback': '/en/feedback',
-    '/feedback/': '/en/feedback',
     '/about': '/en/about',
-    '/about/': '/en/about'
   }
 });
