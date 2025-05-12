@@ -1,0 +1,192 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="CogniPDF X - 强大的 macOS PDF 阅读器"
+  description="一款功能强大的 PDF 阅读器，具有书架、阅读进度跟踪、注释、主题、文字转语音和沉浸式阅读模式。您的完整 PDF 管理解决方案。"
+>
+  <div class="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900 dark:to-primary-800">
+    <!-- Hero Section -->
+    <section class="container mx-auto px-8 md:px-16 lg:px-24 py-20">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="flex-1 text-center md:text-left">
+          <h1 class="text-5xl font-bold text-primary-900 dark:text-white mb-6">
+            CogniPDF X
+          </h1>
+          <p class="text-xl text-primary-700 dark:text-primary-200 mb-8">
+            一款强大的 PDF 阅读器，彻底改变您阅读和管理文档的方式。
+            通过我们全面的功能集，体验全新的阅读舒适度。
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <a
+              href="https://apps.apple.com/app/id6496689357?mt=8"
+              class="inline-flex items-center justify-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg shadow-lg transform transition hover:scale-105 duration-200"
+            >
+              在 Mac App Store 下载
+            </a>
+          </div>
+        </div>
+        <div class="flex-1">
+          <img
+            src="/screenshots/cognipdf-hero.png"
+            alt="CogniPDF X 界面"
+            class="rounded-lg shadow-2xl"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="container mx-auto px-8 md:px-16 lg:px-24 py-20">
+      <h2 class="text-4xl font-bold text-center text-primary-900 dark:text-white mb-16">
+        强大功能，提升阅读体验
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Bookshelves -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <div class="w-12 h-12 bg-primary-100 dark:bg-primary-800 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">智能书架</h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            使用可自定义的书架组织您的 PDF 文件。轻松追踪已读内容和待读列表。
+          </p>
+        </div>
+
+        <!-- Reading Progress -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <div class="w-12 h-12 bg-primary-100 dark:bg-primary-800 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">阅读进度追踪</h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            自动记住您的阅读位置。再也不会在文档中迷失方向。
+          </p>
+        </div>
+
+        <!-- Annotations -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <div class="w-12 h-12 bg-primary-100 dark:bg-primary-800 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">丰富注释</h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            高亮、下划线和添加笔记到您的文档中。让您的 PDF 真正具有交互性。
+          </p>
+        </div>
+
+        <!-- Themes -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <div class="w-12 h-12 bg-primary-100 dark:bg-primary-800 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">多种主题</h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            选择各种主题以适应您的阅读环境。完美适合日间和夜间阅读。
+          </p>
+        </div>
+
+        <!-- Immersive Mode -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <div class="w-12 h-12 bg-primary-100 dark:bg-primary-800 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">沉浸式阅读</h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            通过无干扰的沉浸式阅读模式，专注于您的内容。
+          </p>
+        </div>
+
+        <!-- TTS -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <div class="w-12 h-12 bg-primary-100 dark:bg-primary-800 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">文字转语音</h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            通过高质量的文字转语音功能，聆听您的文档内容。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Features -->
+    <section class="container mx-auto px-8 md:px-16 lg:px-24 py-20 bg-white dark:bg-gray-900">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
+          更多功能，提升您的阅读体验
+        </h2>
+        <ul class="space-y-6">
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-400 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-600 dark:text-gray-300">状态栏窗口阅读模式，方便快速参考</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-400 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-600 dark:text-gray-300">在所有文档中进行全文搜索</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-400 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-600 dark:text-gray-300">流畅的滚动和缩放，提供舒适的阅读体验</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-400 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-600 dark:text-gray-300">书签管理，快速访问重要章节</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="container mx-auto px-8 md:px-16 lg:px-24 py-20">
+      <div class="bg-primary-600 rounded-2xl p-12 text-center">
+        <h2 class="text-3xl font-bold text-white mb-6">
+          准备好改变您的 PDF 阅读体验了吗？
+        </h2>
+        <p class="text-primary-100 mb-8 max-w-2xl mx-auto">
+          立即下载 CogniPDF X，发现阅读和管理 PDF 文档的全新方式。
+        </p>
+        <a
+          href="https://apps.apple.com/app/id6496689357?mt=8"
+          class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 font-semibold rounded-lg shadow-lg transform transition hover:scale-105 duration-200"
+        >
+          在 Mac App Store 下载
+        </a>
+      </div>
+    </section>
+  </div>
+</MainLayout>
+
+<style>
+  .bg-grid-pattern {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.1) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+</style>

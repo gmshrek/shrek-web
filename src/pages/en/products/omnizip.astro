@@ -1,0 +1,189 @@
+---
+import { getProducts } from "../../../config/products";
+const products = getProducts(Astro.url.href);
+import MainLayout from "../../../layouts/MainLayout.astro";
+
+const product = products.find(p => p.id === "omnizip");
+if (!product) {
+  return Astro.redirect("/404");
+}
+---
+
+<MainLayout
+  title="OmniZip - Smart Compression Tool"
+  description="A powerful compression tool that supports multiple formats, featuring smart compression, encryption protection, and batch processing. Your complete file compression solution."
+>
+  <div class="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900 dark:to-primary-800">
+    <!-- Hero Section -->
+    <section class="container mx-auto px-8 md:px-16 lg:px-24 py-20">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="flex-1 text-center md:text-left">
+          <h1 class="text-5xl font-bold text-primary-900 dark:text-white mb-6">
+            OmniZip
+          </h1>
+          <p class="text-xl text-primary-700 dark:text-primary-200 mb-8">
+            Your Smart Compression Tool<br />
+            OmniZip is a powerful compression tool designed for users who value efficiency and security. With its intelligent compression algorithms, robust encryption features, and intuitive interface, it's the ultimate solution for handling compressed files.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <a
+              href="https://apps.apple.com/app/id6499086601?mt=8"
+              class="inline-flex items-center justify-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg shadow-lg transform transition hover:scale-105 duration-200"
+            >
+              Download on Mac App Store
+            </a>
+          </div>
+        </div>
+        <div class="flex-1">
+          <img
+            src="/screenshots/omnizip-hero.png"
+            alt="OmniZip Interface"
+            class="rounded-lg shadow-2xl"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Features Section -->
+    <section class="container mx-auto px-8 md:px-16 lg:px-24 py-20">
+      <h2 class="text-4xl font-bold text-center text-primary-900 dark:text-white mb-16">
+        Powerful Features, Smart Compression
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Smart Compression -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <div class="w-12 h-12 bg-primary-100 dark:bg-primary-800 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Smart Compression</h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            Advanced compression algorithms automatically select the best compression method, achieving maximum compression while maintaining file quality.
+          </p>
+        </div>
+
+        <!-- Format Support -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <div class="w-12 h-12 bg-primary-100 dark:bg-primary-800 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Comprehensive Format Support</h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            Supports major compression formats including ZIP, RAR, 7Z, TAR, GZIP, BZIP2, and more to meet various compression needs.
+          </p>
+        </div>
+
+        <!-- Security -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <div class="w-12 h-12 bg-primary-100 dark:bg-primary-800 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Secure Encryption</h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            Powerful encryption features protect your sensitive files with AES-256 encryption standard.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Features -->
+    <section class="container mx-auto px-8 md:px-16 lg:px-24 py-20 bg-white dark:bg-gray-900">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
+          More Features to Enhance Your Experience
+        </h2>
+        <ul class="space-y-6">
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-400 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-600 dark:text-gray-300">Batch Processing: Process multiple files simultaneously to improve efficiency</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-400 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-600 dark:text-gray-300">Preview Function: View archive contents without extraction</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-400 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-600 dark:text-gray-300">Volume Compression: Support for large file volume compression for easy transfer</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-400 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-600 dark:text-gray-300">Auto Repair: Intelligently detect and repair damaged archive files</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="container mx-auto px-8 md:px-16 lg:px-24 py-20">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
+          Why Choose OmniZip?
+        </h2>
+        <div class="space-y-8">
+          <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Easy to Use</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Intuitive interface design with drag-and-drop operations makes compression and extraction simple and fast.
+            </p>
+          </div>
+          <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Continuous Updates</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Regular updates to support new compression formats, optimize performance, and enhance user experience.
+            </p>
+          </div>
+          <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Professional Support</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              Professional technical support team ready to solve any issues you encounter.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="container mx-auto px-8 md:px-16 lg:px-24 py-20">
+      <div class="bg-primary-600 rounded-2xl p-12 text-center">
+        <h2 class="text-3xl font-bold text-white mb-6">
+          Ready to Experience Smart Compression?
+        </h2>
+        <p class="text-primary-100 mb-8 max-w-2xl mx-auto">
+          Download OmniZip now and experience efficient, secure file compression and extraction.
+        </p>
+        <a
+          href="https://apps.apple.com/app/id6499086601?mt=8"
+          class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 font-semibold rounded-lg shadow-lg transform transition hover:scale-105 duration-200"
+        >
+          Download on Mac App Store
+        </a>
+      </div>
+    </section>
+  </div>
+</MainLayout>
+
+<style>
+  .bg-grid-pattern {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.1) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+</style>

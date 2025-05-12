@@ -1,0 +1,190 @@
+---
+// src/pages/products/mouseboost.astro (示例占位)
+import MainLayout from '../../../layouts/MainLayout.astro';
+const appName = "MouseBoost";
+const appTagline =
+  "30+ handy tools at your right-click. Boost your Mac productivity with a customizable context menu for everyone.";
+const appStoreLink = "https://apps.apple.com/app/id1551462255?mt=8"; 
+---
+
+<MainLayout
+  title="MouseBoost - Smart Mouse Enhancement Tool"
+  description="Enhance your mouse experience with MouseBoost. Features include smart scrolling, gesture control, button customization, and more to boost your productivity."
+>
+  <div class="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900 dark:to-primary-800">
+    <!-- Hero Section -->
+    <section class="container mx-auto px-8 md:px-16 lg:px-24 py-20">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="flex-1 text-center md:text-left">
+          <h1 class="text-5xl font-bold text-primary-900 dark:text-white mb-6">
+            MouseBoost
+          </h1>
+          <p class="text-xl text-primary-700 dark:text-primary-200 mb-8">
+            30+ Handy Tools at Your Right-Click<br />
+            Boost your Mac productivity with a customizable context menu for everyone.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <a
+              href="https://apps.apple.com/app/id1551462255?mt=8"
+              class="inline-flex items-center justify-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg shadow-lg transform transition hover:scale-105 duration-200"
+            >
+              Download on Mac App Store
+            </a>
+          </div>
+        </div>
+        <div class="flex-1">
+          <img
+            src="/screenshots/mouseboost-hero.png"
+            alt="MouseBoost Interface"
+            class="rounded-lg shadow-2xl"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="container mx-auto px-8 md:px-16 lg:px-24 py-20">
+      <h2 class="text-4xl font-bold text-center text-primary-900 dark:text-white mb-16">
+        Main Features
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Create Files -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Create Files</h3>
+          <p class="text-gray-600 dark:text-gray-300">Quickly create common files, support custom types and templates.</p>
+        </div>
+
+        <!-- Favorite Folders -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Favorite Folders</h3>
+          <p class="text-gray-600 dark:text-gray-300">One-click access to favorite folders, open with custom apps.</p>
+        </div>
+
+        <!-- Favorite Apps -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Favorite Apps</h3>
+          <p class="text-gray-600 dark:text-gray-300">Add frequently used apps to the right-click menu, open files/folders quickly.</p>
+        </div>
+
+        <!-- Custom Scripts -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Custom Scripts</h3>
+          <p class="text-gray-600 dark:text-gray-300">Support Shell and AppleScript, with built-in script examples.</p>
+        </div>
+
+        <!-- Hide/Show Files -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Hide/Show Files</h3>
+          <p class="text-gray-600 dark:text-gray-300">Hide or show desktop files with one click for privacy.</p>
+        </div>
+
+        <!-- Lock/Unlock Files -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Lock/Unlock Files</h3>
+          <p class="text-gray-600 dark:text-gray-300">Prevent accidental deletion or operation, supports batch.</p>
+        </div>
+
+        <!-- Color Picker -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Color Picker</h3>
+          <p class="text-gray-600 dark:text-gray-300">Pick any color on screen and copy HEX/RGB.</p>
+        </div>
+
+        <!-- Move Files -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Move Files</h3>
+          <p class="text-gray-600 dark:text-gray-300">Batch organize folder contents.</p>
+        </div>
+
+        <!-- Encrypted Compression -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Encrypted Compression</h3>
+          <p class="text-gray-600 dark:text-gray-300">Support encrypted compression, user-friendly experience.</p>
+        </div>
+
+        <!-- Cut/Copy/Paste/Move -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Cut/Copy/Paste/Move</h3>
+          <p class="text-gray-600 dark:text-gray-300">Efficiently manage files with right-click.</p>
+        </div>
+
+        <!-- Terminal/iTerm2 -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Terminal/iTerm2</h3>
+          <p class="text-gray-600 dark:text-gray-300">Open terminal in any directory with right-click, auto-navigate.</p>
+        </div>
+
+        <!-- Folder Icons -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Folder Icons</h3>
+          <p class="text-gray-600 dark:text-gray-300">20+ styles built-in, support custom icons.</p>
+        </div>
+
+        <!-- Image Processing -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Image Processing</h3>
+          <p class="text-gray-600 dark:text-gray-300">Batch convert formats, generate multi-platform icons.</p>
+        </div>
+
+        <!-- File Info -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">File Info</h3>
+          <p class="text-gray-600 dark:text-gray-300">Get MD5, SHA1, and more with one click.</p>
+        </div>
+
+        <!-- Send To -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Send To</h3>
+          <p class="text-gray-600 dark:text-gray-300">AirDrop or share to WeChat.</p>
+        </div>
+
+        <!-- iCloud Sync -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">iCloud Sync</h3>
+          <p class="text-gray-600 dark:text-gray-300">Sync configuration across devices.</p>
+        </div>
+
+        <!-- Highly Customizable -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Highly Customizable</h3>
+          <p class="text-gray-600 dark:text-gray-300">Menu sorting, disabling, main menu customization, and more.</p>
+        </div>
+      </div>
+      <div class="text-center text-gray-700 dark:text-gray-300 mt-12">
+        <p>No matter if you are a developer, designer, or regular user, as long as you use a Mac, <b>MouseBoost</b> will greatly improve your efficiency and experience!</p>
+        <p>For the price of a cup of milk tea, boost your Mac productivity now!</p>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="container mx-auto px-8 md:px-16 lg:px-24 py-20">
+      <div class="bg-primary-600 rounded-2xl p-12 text-center">
+        <h2 class="text-3xl font-bold text-white mb-6">
+          Experience the Ultimate Right-Click Assistant for Mac!
+        </h2>
+        <p class="text-primary-100 mb-8 max-w-2xl mx-auto">
+          Download MouseBoost now and take control of your Mac like never before.
+        </p>
+        <a
+          href="https://apps.apple.com/app/id1551462255?mt=8"
+          class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 font-semibold rounded-lg shadow-lg transform transition hover:scale-105 duration-200"
+        >
+          Download on Mac App Store
+        </a>
+      </div>
+    </section>
+  </div>
+</MainLayout>
+
+<style>
+  .bg-grid-pattern {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.1) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+</style>

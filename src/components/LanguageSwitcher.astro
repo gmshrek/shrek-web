@@ -1,0 +1,22 @@
+---
+import { languages } from '../i18n/ui';
+import { getLangFromUrl } from '../i18n/ui';
+
+const { url } = Astro;
+const currentLang = getLangFromUrl(url);
+---
+
+<div class="flex gap-2">
+  {Object.entries(languages).map(([lang, label]) => (
+    <a
+      href={`/${lang}${url.pathname.replace(/^\/[a-z]{2}/, '')}`}
+      class={`px-3 py-1 rounded-md ${
+        currentLang === lang
+          ? 'bg-gray-200 dark:bg-gray-700'
+          : 'hover:bg-gray-100 dark:hover:bg-gray-800'
+      }`}
+    >
+      {label}
+    </a>
+  ))}
+</div> 

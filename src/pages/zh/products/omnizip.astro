@@ -1,0 +1,189 @@
+---
+import { getProducts } from "../../../config/products";
+const products = getProducts(Astro.url.href);
+import MainLayout from "../../../layouts/MainLayout.astro";
+
+const product = products.find(p => p.id === "omnizip");
+if (!product) {
+  return Astro.redirect("/404");
+}
+---
+
+<MainLayout
+  title="OmniZip - 智能压缩解压工具"
+  description="一款功能强大的压缩解压工具，支持多种压缩格式，具有智能压缩、加密保护、批量处理等功能。您的完整文件压缩解决方案。"
+>
+  <div class="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900 dark:to-primary-800">
+    <!-- Hero Section -->
+    <section class="container mx-auto px-8 md:px-16 lg:px-24 py-20">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="flex-1 text-center md:text-left">
+          <h1 class="text-5xl font-bold text-primary-900 dark:text-white mb-6">
+            OmniZip
+          </h1>
+          <p class="text-xl text-primary-700 dark:text-primary-200 mb-8">
+            您的智能压缩解压工具<br />
+            OmniZip 是一款功能强大的压缩解压工具，专为追求效率和安全性的用户设计。凭借智能压缩算法、强大的加密功能和直观的界面，它是处理压缩文件的终极解决方案。
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <a
+              href="https://apps.apple.com/app/id6499086601?mt=8"
+              class="inline-flex items-center justify-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg shadow-lg transform transition hover:scale-105 duration-200"
+            >
+              在 Mac App Store 下载
+            </a>
+          </div>
+        </div>
+        <div class="flex-1">
+          <img
+            src="/screenshots/omnizip-hero.png"
+            alt="OmniZip 界面"
+            class="rounded-lg shadow-2xl"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Features Section -->
+    <section class="container mx-auto px-8 md:px-16 lg:px-24 py-20">
+      <h2 class="text-4xl font-bold text-center text-primary-900 dark:text-white mb-16">
+        强大功能，智能压缩
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Smart Compression -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <div class="w-12 h-12 bg-primary-100 dark:bg-primary-800 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">智能压缩</h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            采用先进的压缩算法，自动选择最佳压缩方式，在保持文件质量的同时实现最大压缩率。
+          </p>
+        </div>
+
+        <!-- Format Support -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <div class="w-12 h-12 bg-primary-100 dark:bg-primary-800 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">全面的格式支持</h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            支持 ZIP、RAR、7Z、TAR、GZIP、BZIP2 等主流压缩格式，满足各种压缩需求。
+          </p>
+        </div>
+
+        <!-- Security -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <div class="w-12 h-12 bg-primary-100 dark:bg-primary-800 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">安全加密</h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            强大的加密功能，保护您的敏感文件，支持 AES-256 加密标准。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Features -->
+    <section class="container mx-auto px-8 md:px-16 lg:px-24 py-20 bg-white dark:bg-gray-900">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
+          更多功能，提升使用体验
+        </h2>
+        <ul class="space-y-6">
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-400 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-600 dark:text-gray-300">批量处理：同时处理多个文件，提高工作效率</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-400 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-600 dark:text-gray-300">预览功能：无需解压即可预览压缩包内容</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-400 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-600 dark:text-gray-300">分卷压缩：支持大文件分卷压缩，方便传输</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-400 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-600 dark:text-gray-300">自动修复：智能检测并修复损坏的压缩文件</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="container mx-auto px-8 md:px-16 lg:px-24 py-20">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
+          为什么选择 OmniZip？
+        </h2>
+        <div class="space-y-8">
+          <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">简单易用</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              直观的界面设计，拖放操作，让压缩解压变得简单快捷。
+            </p>
+          </div>
+          <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">持续更新</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              定期更新以支持新的压缩格式，优化性能，提升用户体验。
+            </p>
+          </div>
+          <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">专业支持</h3>
+            <p class="text-gray-600 dark:text-gray-300">
+              专业的技术支持团队，随时为您解决使用过程中的问题。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="container mx-auto px-8 md:px-16 lg:px-24 py-20">
+      <div class="bg-primary-600 rounded-2xl p-12 text-center">
+        <h2 class="text-3xl font-bold text-white mb-6">
+          准备好体验智能压缩了吗？
+        </h2>
+        <p class="text-primary-100 mb-8 max-w-2xl mx-auto">
+          立即下载 OmniZip，体验高效、安全的文件压缩解压。
+        </p>
+        <a
+          href="https://apps.apple.com/app/id6499086601?mt=8"
+          class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 font-semibold rounded-lg shadow-lg transform transition hover:scale-105 duration-200"
+        >
+          在 Mac App Store 下载
+        </a>
+      </div>
+    </section>
+  </div>
+</MainLayout>
+
+<style>
+  .bg-grid-pattern {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.1) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+</style>

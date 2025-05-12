@@ -1,9 +1,18 @@
+---
+import { useTranslations } from '../i18n/ui';
+import { getLangFromUrl } from '../i18n/ui';
+
+const { url } = Astro;
+const lang = getLangFromUrl(url);
+const t = useTranslations(lang);
+---
+
 <section class="py-20 bg-gray-50 dark:bg-gray-800">
     <div class="container mx-auto px-4">
       <h2
         class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12"
       >
-        Why Choose Our Apps?
+        {t('features.title')}
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div
@@ -27,10 +36,10 @@
             </svg>
           </div>
           <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-            Focus on macOS Native Experience
+            {t('features.macos.title')}
           </h3>
           <p class="text-gray-600 dark:text-gray-300">
-            Apps designed to feel right at home on your Mac.
+            {t('features.macos.description')}
           </p>
         </div>
         <div
@@ -54,10 +63,10 @@
             </svg>
           </div>
           <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-            Clean & Efficient Design
+            {t('features.design.title')}
           </h3>
           <p class="text-gray-600 dark:text-gray-300">
-            Intuitive interfaces that get out of your way.
+            {t('features.design.description')}
           </p>
         </div>
         <div
@@ -80,12 +89,12 @@
             </svg>
           </div>
           <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-            Continuous Updates & Support
+            {t('features.support.title')}
           </h3>
           <p class="text-gray-600 dark:text-gray-300">
-            We're committed to improving our apps and helping you.
+            {t('features.support.description')}
           </p>
         </div>
       </div>
     </div>
-  </section>
+  </section> 

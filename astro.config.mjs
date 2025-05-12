@@ -12,4 +12,11 @@ export default defineConfig({
       cssMinify: true,
     },
   },
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "zh"],
+    routing: {
+      prefixDefaultLocale: false
+    }
+  }
 });

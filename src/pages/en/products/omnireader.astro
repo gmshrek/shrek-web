@@ -1,26 +1,30 @@
 ---
-import MainLayout from "../../layouts/MainLayout.astro";
+import MainLayout from "../../../layouts/MainLayout.astro";
+// 未来可以为每个产品创建更详细的组件
+const appName = "OmniReader";
+const appTagline = "Smart & Versatile eBook Reader, AI-powered, supports all major formats, and designed for efficiency.";
+const appStoreLink = "https://apps.apple.com/app/id1510511137?mt=12"; // 替换
 ---
 
 <MainLayout
-  title="CogniPDF X - Powerful PDF Reader for macOS"
-  description="A powerful PDF reader with bookshelves, reading progress tracking, annotations, themes, TTS, and immersive reading mode. Your complete PDF management solution."
+  title="OmniReader - Powerful E-book Reader"
+  description="A powerful e-book reader that supports multiple formats, featuring smart bookshelves, reading progress tracking, annotations, themes, text-to-speech, and immersive reading mode."
 >
   <div class="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900 dark:to-primary-800">
     <!-- Hero Section -->
-    <section class="container mx-auto px-4 py-20">
+    <section class="container mx-auto px-8 md:px-16 lg:px-24 py-20">
       <div class="flex flex-col md:flex-row items-center gap-12">
         <div class="flex-1 text-center md:text-left">
           <h1 class="text-5xl font-bold text-primary-900 dark:text-white mb-6">
-            CogniPDF X
+            OmniReader
           </h1>
           <p class="text-xl text-primary-700 dark:text-primary-200 mb-8">
-            A powerful PDF reader that transforms how you read and manage your documents. 
-            Experience a new level of reading comfort with our comprehensive feature set.
+            Your Complete E-book Reading Solution<br />
+            Experience the joy of reading with our powerful e-book reader. Support for multiple formats, smart bookshelves, and immersive reading features make OmniReader your perfect reading companion.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <a
-              href="https://apps.apple.com/app/id6496689357?mt=8"
+              href="https://apps.apple.com/app/id6499086601?mt=8"
               class="inline-flex items-center justify-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg shadow-lg transform transition hover:scale-105 duration-200"
             >
               Download on Mac App Store
@@ -29,8 +33,8 @@ import MainLayout from "../../layouts/MainLayout.astro";
         </div>
         <div class="flex-1">
           <img
-            src="/screenshots/cognipdf-hero.png"
-            alt="CogniPDF X Interface"
+            src="/screenshots/omnireader-hero.png"
+            alt="OmniReader Interface"
             class="rounded-lg shadow-2xl"
           />
         </div>
@@ -38,13 +42,13 @@ import MainLayout from "../../layouts/MainLayout.astro";
     </section>
 
     <!-- Features Section -->
-    <section class="container mx-auto px-4 py-20">
+    <section class="container mx-auto px-8 md:px-16 lg:px-24 py-20">
       <h2 class="text-4xl font-bold text-center text-primary-900 dark:text-white mb-16">
         Powerful Features for Better Reading
       </h2>
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Bookshelves -->
+        <!-- Smart Bookshelves -->
         <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
           <div class="w-12 h-12 bg-primary-100 dark:bg-primary-800 rounded-lg flex items-center justify-center mb-6">
             <svg class="w-6 h-6 text-primary-600 dark:text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -53,7 +57,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
           </div>
           <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Smart Bookshelves</h3>
           <p class="text-gray-600 dark:text-gray-300">
-            Organize your PDFs with customizable bookshelves. Keep track of what you've read and what's next on your list.
+            Organize your books with customizable bookshelves. Easily track your reading progress and manage your collection.
           </p>
         </div>
 
@@ -64,9 +68,9 @@ import MainLayout from "../../layouts/MainLayout.astro";
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Reading Progress Tracking</h3>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Reading Progress</h3>
           <p class="text-gray-600 dark:text-gray-300">
-            Automatically remembers where you left off. Never lose your place in a document again.
+            Automatically track your reading progress. Never lose your place in any book.
           </p>
         </div>
 
@@ -79,7 +83,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
           </div>
           <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Rich Annotations</h3>
           <p class="text-gray-600 dark:text-gray-300">
-            Highlight, underline, and add notes to your documents. Make your PDFs truly interactive.
+            Highlight, underline, and add notes to your books. Make your reading experience truly interactive.
           </p>
         </div>
 
@@ -92,7 +96,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
           </div>
           <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Multiple Themes</h3>
           <p class="text-gray-600 dark:text-gray-300">
-            Choose from various themes to match your reading environment. Perfect for day and night reading.
+            Choose from various themes to suit your reading environment. Perfect for both day and night reading.
           </p>
         </div>
 
@@ -118,17 +122,17 @@ import MainLayout from "../../layouts/MainLayout.astro";
           </div>
           <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Text-to-Speech</h3>
           <p class="text-gray-600 dark:text-gray-300">
-            Listen to your documents with high-quality text-to-speech functionality.
+            Listen to your books with high-quality text-to-speech functionality.
           </p>
         </div>
       </div>
     </section>
 
     <!-- Additional Features -->
-    <section class="container mx-auto px-4 py-20 bg-white dark:bg-gray-900">
+    <section class="container mx-auto px-8 md:px-16 lg:px-24 py-20 bg-white dark:bg-gray-900">
       <div class="max-w-3xl mx-auto">
         <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
-          More Features to Enhance Your Reading Experience
+          More Features to Enhance Your Reading
         </h2>
         <ul class="space-y-6">
           <li class="flex items-start">
@@ -141,7 +145,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
             <svg class="w-6 h-6 text-primary-600 dark:text-primary-400 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
             </svg>
-            <span class="text-gray-600 dark:text-gray-300">Full-text search across all your documents</span>
+            <span class="text-gray-600 dark:text-gray-300">Full-text search across all your books</span>
           </li>
           <li class="flex items-start">
             <svg class="w-6 h-6 text-primary-600 dark:text-primary-400 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -153,23 +157,68 @@ import MainLayout from "../../layouts/MainLayout.astro";
             <svg class="w-6 h-6 text-primary-600 dark:text-primary-400 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
             </svg>
-            <span class="text-gray-600 dark:text-gray-300">Bookmark management for quick access to important sections</span>
+            <span class="text-gray-600 dark:text-gray-300">Bookmark management for quick access to important chapters</span>
           </li>
         </ul>
       </div>
     </section>
 
+    <!-- Keyboard Shortcuts -->
+    <section class="container mx-auto px-8 md:px-16 lg:px-24 py-20">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
+          Keyboard Shortcuts
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Navigation</h3>
+            <ul class="space-y-3">
+              <li class="flex justify-between">
+                <span class="text-gray-600 dark:text-gray-300">Next Page</span>
+                <kbd class="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">→</kbd>
+              </li>
+              <li class="flex justify-between">
+                <span class="text-gray-600 dark:text-gray-300">Previous Page</span>
+                <kbd class="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">←</kbd>
+              </li>
+              <li class="flex justify-between">
+                <span class="text-gray-600 dark:text-gray-300">Go to Page</span>
+                <kbd class="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">⌘G</kbd>
+              </li>
+            </ul>
+          </div>
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Reading</h3>
+            <ul class="space-y-3">
+              <li class="flex justify-between">
+                <span class="text-gray-600 dark:text-gray-300">Toggle Theme</span>
+                <kbd class="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">⌘T</kbd>
+              </li>
+              <li class="flex justify-between">
+                <span class="text-gray-600 dark:text-gray-300">Toggle Fullscreen</span>
+                <kbd class="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">⌘F</kbd>
+              </li>
+              <li class="flex justify-between">
+                <span class="text-gray-600 dark:text-gray-300">Search</span>
+                <kbd class="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">⌘F</kbd>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- CTA Section -->
-    <section class="container mx-auto px-4 py-20">
+    <section class="container mx-auto px-8 md:px-16 lg:px-24 py-20">
       <div class="bg-primary-600 rounded-2xl p-12 text-center">
         <h2 class="text-3xl font-bold text-white mb-6">
-          Ready to Transform Your PDF Reading Experience?
+          Ready to Transform Your Reading Experience?
         </h2>
         <p class="text-primary-100 mb-8 max-w-2xl mx-auto">
-          Download CogniPDF X today and discover a new way to read and manage your PDF documents.
+          Download OmniReader now and discover a new way to enjoy your e-books.
         </p>
         <a
-          href="https://apps.apple.com/app/id6496689357?mt=8"
+          href="https://apps.apple.com/app/id6499086601?mt=8"
           class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 font-semibold rounded-lg shadow-lg transform transition hover:scale-105 duration-200"
         >
           Download on Mac App Store

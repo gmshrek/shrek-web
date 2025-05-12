@@ -1,28 +1,35 @@
 ---
 // src/components/Header.astro
+import { useTranslations } from '../i18n/ui';
+import { getLangFromUrl } from '../i18n/ui';
+
+const { url } = Astro;
+const lang = getLangFromUrl(url);
+const t = useTranslations(lang);
+
 const brandName = "GM Shrek";
 ---
 
 <header>
   <nav>
-    <a href="/" class="brand">{brandName}</a>
+    <a href={`/${lang}`} class="brand">{brandName}</a>
     <ul>
-      <li><a href="/">Home</a></li>
+      <li><a href={`/${lang}`}>{t('nav.home')}</a></li>
       <li class="dropdown">
         {/* 父元素 */}
-        <a href="#">Products</a>
+        <a href="#">{t('nav.products')}</a>
         {/* 这个 a 标签本身不应该控制显示，而是父 li:hover 控制 */}
         <ul class="dropdown-menu">
           {/* 下拉菜单 */}
-          <li><a href="/products/omnireader">OmniReader</a></li>
-          <li><a href="/products/mouseboost">MouseBoost</a></li>
-          <li><a href="/products/omnizip">OmniZip</a></li>
-          <li><a href="/products/omniconverter">OmniConverter</a></li>
-          <li><a href="/products/cognipdf">CogniPDF X</a></li>
-          <li><a href="/products/textreader">TXT Reader</a></li>
+          <li><a href={`/${lang}/products/omnireader`}>{t('products.omnireader')}</a></li>
+          <li><a href={`/${lang}/products/mouseboost`}>{t('products.mouseboost')}</a></li>
+          <li><a href={`/${lang}/products/omnizip`}>{t('products.omnizip')}</a></li>
+          <li><a href={`/${lang}/products/omniconverter`}>{t('products.omniconverter')}</a></li>
+          <li><a href={`/${lang}/products/cognipdf`}>{t('products.cognipdf')}</a></li>
+          <li><a href={`/${lang}/products/textreader`}>{t('products.textreader')}</a></li>
         </ul>
       </li>
-      <li><a href="/feedback">Feedback</a></li>
+      <li><a href={`/${lang}/feedback`}>{t('nav.feedback')}</a></li>
     </ul>
   </nav>
 </header>

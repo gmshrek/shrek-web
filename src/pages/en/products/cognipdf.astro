@@ -1,10 +1,10 @@
 ---
-import MainLayout from "../../layouts/MainLayout.astro";
+import MainLayout from "../../../layouts/MainLayout.astro";
 ---
 
 <MainLayout
-  title="TXT Reader - Simple & Powerful Text Reader for macOS"
-  description="A simple and powerful TXT/EPUB reader with bookshelves, reading progress tracking, themes, TTS, and immersive reading mode."
+  title="CogniPDF X - Powerful PDF Reader for macOS"
+  description="A powerful PDF reader with bookshelves, reading progress tracking, annotations, themes, TTS, and immersive reading mode. Your complete PDF management solution."
 >
   <div class="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900 dark:to-primary-800">
     <!-- Hero Section -->
@@ -12,20 +12,27 @@ import MainLayout from "../../layouts/MainLayout.astro";
       <div class="flex flex-col md:flex-row items-center gap-12">
         <div class="flex-1 text-center md:text-left">
           <h1 class="text-5xl font-bold text-primary-900 dark:text-white mb-6">
-            TXT Reader
+            CogniPDF X
           </h1>
           <p class="text-xl text-primary-700 dark:text-primary-200 mb-8">
-            A simple and powerful text reader that makes reading TXT and EPUB files a pleasure. 
+            A powerful PDF reader that transforms how you read and manage your documents. 
             Experience a new level of reading comfort with our comprehensive feature set.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <a
-              href="https://apps.apple.com/app/id1669005649?mt=8"
+              href="https://apps.apple.com/app/id6496689357?mt=8"
               class="inline-flex items-center justify-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg shadow-lg transform transition hover:scale-105 duration-200"
             >
               Download on Mac App Store
             </a>
           </div>
+        </div>
+        <div class="flex-1">
+          <img
+            src="/screenshots/cognipdf-hero.png"
+            alt="CogniPDF X Interface"
+            class="rounded-lg shadow-2xl"
+          />
         </div>
       </div>
     </section>
@@ -46,7 +53,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
           </div>
           <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Smart Bookshelves</h3>
           <p class="text-gray-600 dark:text-gray-300">
-            Organize your books with customizable bookshelves. Keep track of what you've read and what's next on your list.
+            Organize your PDFs with customizable bookshelves. Keep track of what you've read and what's next on your list.
           </p>
         </div>
 
@@ -63,29 +70,16 @@ import MainLayout from "../../layouts/MainLayout.astro";
           </p>
         </div>
 
-        <!-- Encoding Support -->
+        <!-- Annotations -->
         <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
           <div class="w-12 h-12 bg-primary-100 dark:bg-primary-800 rounded-lg flex items-center justify-center mb-6">
             <svg class="w-6 h-6 text-primary-600 dark:text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Smart Encoding Support</h3>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Rich Annotations</h3>
           <p class="text-gray-600 dark:text-gray-300">
-            Intelligent recognition of common text encodings ensures your files are always displayed correctly.
-          </p>
-        </div>
-
-        <!-- Chapter Division -->
-        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
-          <div class="w-12 h-12 bg-primary-100 dark:bg-primary-800 rounded-lg flex items-center justify-center mb-6">
-            <svg class="w-6 h-6 text-primary-600 dark:text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Smart Chapter Division</h3>
-          <p class="text-gray-600 dark:text-gray-300">
-            Automatic chapter detection makes navigation through your books effortless.
+            Highlight, underline, and add notes to your documents. Make your PDFs truly interactive.
           </p>
         </div>
 
@@ -99,6 +93,19 @@ import MainLayout from "../../layouts/MainLayout.astro";
           <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Multiple Themes</h3>
           <p class="text-gray-600 dark:text-gray-300">
             Choose from various themes to match your reading environment. Perfect for day and night reading.
+          </p>
+        </div>
+
+        <!-- Immersive Mode -->
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <div class="w-12 h-12 bg-primary-100 dark:bg-primary-800 rounded-lg flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Immersive Reading</h3>
+          <p class="text-gray-600 dark:text-gray-300">
+            Focus on your content with distraction-free immersive reading mode.
           </p>
         </div>
 
@@ -128,19 +135,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
             <svg class="w-6 h-6 text-primary-600 dark:text-primary-400 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
             </svg>
-            <span class="text-gray-600 dark:text-gray-300">Immersive reading mode for distraction-free reading</span>
-          </li>
-          <li class="flex items-start">
-            <svg class="w-6 h-6 text-primary-600 dark:text-primary-400 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
             <span class="text-gray-600 dark:text-gray-300">Status bar window reading mode for quick reference</span>
-          </li>
-          <li class="flex items-start">
-            <svg class="w-6 h-6 text-primary-600 dark:text-primary-400 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
-            <span class="text-gray-600 dark:text-gray-300">Export to PDF, HTML and UTF8 encoded TXT files</span>
           </li>
           <li class="flex items-start">
             <svg class="w-6 h-6 text-primary-600 dark:text-primary-400 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -148,23 +143,50 @@ import MainLayout from "../../layouts/MainLayout.astro";
             </svg>
             <span class="text-gray-600 dark:text-gray-300">Full-text search across all your documents</span>
           </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-400 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-600 dark:text-gray-300">Smooth scrolling and zooming for comfortable reading</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="w-6 h-6 text-primary-600 dark:text-primary-400 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-600 dark:text-gray-300">Bookmark management for quick access to important sections</span>
+          </li>
         </ul>
       </div>
     </section>
 
-    <!-- Call to Action -->
+    <!-- CTA Section -->
     <section class="container mx-auto px-4 py-20">
-      <div class="text-center">
-        <h2 class="text-3xl font-bold text-primary-900 dark:text-white mb-8">
-          Ready to Start Reading?
+      <div class="bg-primary-600 rounded-2xl p-12 text-center">
+        <h2 class="text-3xl font-bold text-white mb-6">
+          Ready to Transform Your PDF Reading Experience?
         </h2>
+        <p class="text-primary-100 mb-8 max-w-2xl mx-auto">
+          Download CogniPDF X today and discover a new way to read and manage your PDF documents.
+        </p>
         <a
-          href="https://apps.apple.com/app/id1669005649?mt=8"
-          class="inline-flex items-center justify-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg shadow-lg transform transition hover:scale-105 duration-200"
+          href="https://apps.apple.com/app/id6496689357?mt=8"
+          class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 font-semibold rounded-lg shadow-lg transform transition hover:scale-105 duration-200"
         >
-          Download TXT Reader on the Mac App Store
+          Download on Mac App Store
         </a>
       </div>
     </section>
   </div>
 </MainLayout>
+
+<style>
+  .bg-grid-pattern {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.1) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+</style>

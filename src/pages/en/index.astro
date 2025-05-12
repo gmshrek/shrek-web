@@ -1,0 +1,97 @@
+---
+// src/pages/index.astro
+import MainLayout from "../../layouts/MainLayout.astro";
+import ProductCard from "../../components/ProductCard.astro";
+import Features from "../../components/Features.astro";
+import LanguageSwitcher from "../../components/LanguageSwitcher.astro";
+import { getProducts } from "../../config/products";
+const products = getProducts(Astro.url.href);
+---
+
+<MainLayout title="GM Shrek - Professional Mac Software">
+  <main>
+    <div class="language-switcher">
+      <LanguageSwitcher />
+    </div>
+    <section class="hero">
+      <div class="container">
+        <h1>Professional Mac Software</h1>
+        <p>Discover our suite of powerful tools designed to enhance your Mac experience</p>
+      </div>
+    </section>
+
+    <section class="products">
+      <div class="container">
+        <div class="product-grid">
+          {products.map((product) => (
+            <ProductCard
+              name={product.name}
+              icon={product.icon}
+              tagline={product.tagline}
+              url={product.url}
+              appStoreUrl={product.appStoreUrl}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <Features />
+  </main>
+</MainLayout>
+
+<style>
+  .language-switcher {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    color: #1e293b;
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 1.25rem;
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .products {
+    padding: 4rem 0;
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-items: center;
+  }
+
+  @media (max-width: 1024px) {
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .product-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
