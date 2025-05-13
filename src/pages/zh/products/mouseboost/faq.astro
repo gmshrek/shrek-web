@@ -1,1 +1,204 @@
- 
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import FAQItem from '@/components/FAQItem.astro';
+
+const appName = "MouseBoost";
+const appTagline = "30+ 实用工具尽在右键菜单。为每个人提供可自定义的上下文菜单，提升您的 Mac 生产力。";
+const appStoreLink = "https://apps.apple.com/app/id1551462255?mt=8";
+
+const faqs = [
+{
+    question: "右键菜单不显示？",
+    answers: [
+      {
+        text: "1、检查是否启用了访达扩展",
+        images: [
+          { src: "/faqs/mouseboost/zh6.png", alt: "访达扩展设置" }
+        ]
+      },
+      {
+        text: "2、检查右键菜单功能是否开启：<br><br>触控板：系统设置 -> 触控板 -> 光标与点按 -> 辅助点按 设置为【双指轻点或点按】（或点按左下角、点按右下角）",
+        images: [
+          { src: "/faqs/mouseboost/zh5.png", alt: "触控板设置" }
+        ]
+      },
+      {
+        text: "鼠标：系统设置 -> 鼠标 -> 辅助点按 设置为【点按右侧】",
+        images: [
+          { src: "/faqs/mouseboost/zh4.png", alt: "鼠标设置" }
+        ]
+      }
+    ]
+  },
+
+  {
+    question: "MacOS14+中无法在iCloud，Onedrive等云文件夹显示右键菜单？",
+    answers: [
+      {
+        text: "在 MacOS 14及以后的系统中，苹果限制了 iCloud 文件夹中的访达扩展，其他目录可正常使用！您可以通过以下设置关闭桌面与文稿文件夹的 iCloud 同步功能：系统设置 -> Apple ID -> iCloud -> iCloud云盘。",
+        images: [
+          { src: "/faqs/mouseboost/zh1.png", alt: "iCloud 设置说明" }
+        ]
+      },
+      {
+        text: "如果您必须启用 iCloud 云盘同步功能，可以通过以下方式在云盘文件夹中使用右键菜单功能：",
+        images: [
+          { src: "/faqs/mouseboost/zh2.png", alt: "iCloud 云盘使用说明" }
+        ]
+      }
+    ]
+  },
+  {
+    question: "外置磁盘中无法显示右键菜单怎么办？",
+    answers: [
+      {
+        text: "所有非当前系统中文件夹的磁盘均为外置磁盘，如 U 盘，移动硬盘，分区的磁盘等，如果要想启用，需要进行如图操作，并重启Finder",
+        images: [
+          { src: "/faqs/mouseboost/zh3.png", alt: "外置磁盘设置说明" }
+        ]
+      }
+    ]
+  },
+  {
+    question: "无法移动，拷贝，剪切粘贴文件怎么办？",
+    answers: [
+      {
+        text: "1、系统设置 -> 隐私与安全性 -> 完全磁盘访问权限 中将右键助手添加进来并勾选。"
+      },
+      {
+        text: "2、如果使用过程中，弹出授权窗口，请不要选择任何文件夹，直接点击右下角授权即可。"
+      }
+    ]
+  },
+  {
+    question: "进入常用 APP 无法自动使用该 APP 打开当前路径？",
+    answers: [
+      {
+        text: "这个功能需要应用程序本身支持路径导航功能。大多数编辑类应用程序（如 VS Code、Sublime Text、WebStorm 等）都支持此功能。如果应用程序本身不支持路径导航，MouseBoost 将无法自动打开当前路径。"
+      }
+    ]
+  }
+];
+---
+
+<MainLayout
+  title="MouseBoost 常见问题 - 右键助手使用指南"
+  description="MouseBoost 常见问题解答，帮助您更好地使用这款强大的 Mac 右键菜单增强工具。"
+>
+  <div class="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900 dark:to-primary-800">
+    <!-- FAQ Section -->
+    <section class="container mx-auto px-8 md:px-16 lg:px-24 py-16">
+      <h2 class="text-4xl font-bold text-center text-primary-900 dark:text-white mb-16">
+        常见问题解答
+      </h2>
+      <div class="grid grid-cols-1 gap-8 max-w-4xl mx-auto">
+        {faqs.map((faq) => (
+          <FAQItem
+            question={faq.question}
+            answers={faq.answers}
+          />
+        ))}
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="container mx-auto px-8 md:px-16 lg:px-24 py-20">
+      <div class="text-center">
+        <h2 class="text-3xl font-bold text-primary-900 dark:text-white mb-8">
+          立即体验 MouseBoost 的强大功能！
+        </h2>
+        <a
+          href="https://apps.apple.com/app/id1551462255?mt=8"
+          class="inline-flex items-center justify-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg shadow-lg transform transition hover:scale-105 duration-200"
+        >
+          在 Mac App Store 下载 MouseBoost
+        </a>
+      </div>
+    </section>
+  </div>
+</MainLayout>
+
+<style>
+  .product-detail {
+    padding: 1rem;
+  }
+  .product-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+  }
+  .product-detail-icon {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+  }
+  .product-header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .tagline {
+    font-size: 1.08rem;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  .app-store-button-detail svg {
+    height: 48px;
+    margin-top: 0.5rem;
+  }
+  .product-visuals {
+    margin-bottom: 3rem;
+  }
+  .product-visuals h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .feature-list {
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    padding-left: 1.2rem;
+    font-size: 1.08rem;
+    line-height: 1.8;
+  }
+  .feature-list li {
+    margin-bottom: 0.5rem;
+  }
+  .feature-desc {
+    text-align: center;
+    color: #444;
+    font-size: 1.08rem;
+    margin-bottom: 1.5rem;
+  }
+  .call-to-action-bottom {
+    text-align: center;
+    padding: 2rem;
+    background-color: #409EFF;
+    color: white;
+    border-radius: 8px;
+  }
+  .call-to-action-bottom h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+  }
+  .call-to-action-bottom .cta-button {
+    display: inline-block;
+    background: #fff;
+    color: #409EFF;
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 0.8rem 2.2rem;
+    font-size: 1.08rem;
+    text-decoration: none;
+    margin-top: 0.5rem;
+    transition: background 0.18s, color 0.18s;
+  }
+  .call-to-action-bottom .cta-button:hover {
+    background: #e6f0fa;
+    color: #1769c2;
+  }
+</style>

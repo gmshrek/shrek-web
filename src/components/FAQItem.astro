@@ -1,0 +1,73 @@
+---
+interface AnswerSection {
+  text: string;
+  images?: { src: string; alt: string }[];
+}
+
+interface Props {
+  question: string;
+  answers: AnswerSection[];
+}
+
+const { question, answers } = Astro.props;
+---
+
+<div class="faq-item bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+  <button
+    class="w-full text-left"
+  >
+    <div class="flex justify-between items-center">
+      <h3 class="text-xl font-semibold text-gray-900 dark:text-white">{question}</h3>
+      <svg
+        class="w-6 h-6 transform transition-transform duration-200"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M19 9l-7 7-7-7"
+        />
+      </svg>
+    </div>
+  </button>
+  <div class="mt-4 hidden">
+    {answers.map((section) => (
+      <div class="mb-6 last:mb-0">
+        <div class="text-gray-600 dark:text-gray-300">
+          <Fragment set:html={section.text} />
+        </div>
+        {section.images?.map((image) => (
+          <img
+            src={image.src}
+            alt={image.alt}
+            class="mt-4 rounded-lg shadow-md"
+          />
+        ))}
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  .faq-item.expanded button svg {
+    transform: rotate(180deg);
+  }
+  .faq-item.expanded > div:last-child {
+    display: block;
+  }
+</style>
+
+<script>
+  // 添加点击事件处理
+  document.querySelectorAll('.faq-item button').forEach((button) => {
+    button.addEventListener('click', () => {
+      const faqItem = button.closest('.faq-item');
+      if (faqItem) {
+        faqItem.classList.toggle('expanded');
+      }
+    });
+  });
+</script> 

@@ -1,1 +1,203 @@
- 
+---
+import MainLayout from '@/layouts/MainLayout.astro';
+import FAQItem from '@/components/FAQItem.astro';
+
+const appName = "MouseBoost";
+const appTagline = "30+ useful tools in your right-click menu. A customizable context menu for everyone to boost your Mac productivity.";
+const appStoreLink = "https://apps.apple.com/app/id1551462255?mt=8";
+
+const faqs = [
+  {
+    question: "Right-click menu not showing up?",
+    answers: [
+      {
+        text: "1. Check if Finder Extension is enabled",
+        images: [
+          { src: "/faqs/mouseboost/en6.png", alt: "Finder Extension Settings" }
+        ]
+      },
+      {
+        text: "2. Check if right-click functionality is enabled:<br><br>Trackpad: System Settings -> Trackpad -> Point & Click -> Secondary click set to [Two fingers click or tap] (or click bottom left/right corner)",
+        images: [
+          { src: "/faqs/mouseboost/en5.png", alt: "Trackpad Settings" }
+        ]
+      },
+      {
+        text: "Mouse: System Settings -> Mouse -> Secondary click set to [Click right side]",
+        images: [
+          { src: "/faqs/mouseboost/en4.png", alt: "Mouse Settings" }
+        ]
+      }
+    ]
+  },
+  {
+    question: "Can't use right-click menu in iCloud, OneDrive, and other cloud sync folders in macOS 14+?",
+    answers: [
+      {
+        text: "In macOS 14 and later, Apple has restricted Finder extensions in iCloud folders, but other directories work normally! You can disable iCloud sync for Desktop and Documents folders by going to: System Settings -> Apple ID -> iCloud -> iCloud Drive.",
+        images: [
+          { src: "/faqs/mouseboost/en1.png", alt: "iCloud Settings" }
+        ]
+      },
+      {
+        text: "If you must enable iCloud Drive sync, you can use the right-click menu in cloud folders by following these steps:",
+        images: [
+          { src: "/faqs/mouseboost/en2.png", alt: "iCloud Drive Usage Guide" }
+        ]
+      }
+    ]
+  },
+  {
+    question: "Can't use right-click menu on external drives?",
+    answers: [
+      {
+        text: "All non-system folders are considered external drives, including USB drives, external hard drives, and partitioned disks. To enable the right-click menu, follow the steps shown below and restart Finder.",
+        images: [
+          { src: "/faqs/mouseboost/en3.png", alt: "External Drive Settings" }
+        ]
+      }
+    ]
+  },
+  {
+    question: "Can't move, copy, cut, or paste files?",
+    answers: [
+      {
+        text: "1. Go to System Settings -> Privacy & Security -> Full Disk Access and add MouseBoost to the list."
+      },
+      {
+        text: "2. If an authorization window pops up during use, don't select any folders, just click authorize in the bottom right corner."
+      }
+    ]
+  },
+  {
+    question: "Can't automatically open current path in frequently used apps?",
+    answers: [
+      {
+        text: "This feature requires the application itself to support path navigation. Most editing applications (such as VS Code, Sublime Text, WebStorm, etc.) support this feature. If the application itself doesn't support path navigation, MouseBoost won't be able to automatically open the current path."
+      }
+    ]
+  }
+];
+---
+
+<MainLayout
+  title="MouseBoost FAQ - Right-Click Menu Enhancement Guide"
+  description="Frequently asked questions about MouseBoost, helping you better use this powerful Mac right-click menu enhancement tool."
+>
+  <div class="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900 dark:to-primary-800">
+    <!-- FAQ Section -->
+    <section class="container mx-auto px-8 md:px-16 lg:px-24 py-16">
+      <h2 class="text-4xl font-bold text-center text-primary-900 dark:text-white mb-16">
+        Frequently Asked Questions
+      </h2>
+      <div class="grid grid-cols-1 gap-8 max-w-4xl mx-auto">
+        {faqs.map((faq) => (
+          <FAQItem
+            question={faq.question}
+            answers={faq.answers}
+          />
+        ))}
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="container mx-auto px-8 md:px-16 lg:px-24 py-20">
+      <div class="text-center">
+        <h2 class="text-3xl font-bold text-primary-900 dark:text-white mb-8">
+          Experience the Power of MouseBoost Now!
+        </h2>
+        <a
+          href="https://apps.apple.com/app/id1551462255?mt=8"
+          class="inline-flex items-center justify-center px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg shadow-lg transform transition hover:scale-105 duration-200"
+        >
+          Download MouseBoost on Mac App Store
+        </a>
+      </div>
+    </section>
+  </div>
+</MainLayout>
+
+<style>
+  .product-detail {
+    padding: 1rem;
+  }
+  .product-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+  }
+  .product-detail-icon {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+  }
+  .product-header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .tagline {
+    font-size: 1.08rem;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  .app-store-button-detail svg {
+    height: 48px;
+    margin-top: 0.5rem;
+  }
+  .product-visuals {
+    margin-bottom: 3rem;
+  }
+  .product-visuals h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .feature-list {
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    padding-left: 1.2rem;
+    font-size: 1.08rem;
+    line-height: 1.8;
+  }
+  .feature-list li {
+    margin-bottom: 0.5rem;
+  }
+  .feature-desc {
+    text-align: center;
+    color: #444;
+    font-size: 1.08rem;
+    margin-bottom: 1.5rem;
+  }
+  .call-to-action-bottom {
+    text-align: center;
+    padding: 2rem;
+    background-color: #409EFF;
+    color: white;
+    border-radius: 8px;
+  }
+  .call-to-action-bottom h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+  }
+  .call-to-action-bottom .cta-button {
+    display: inline-block;
+    background: #fff;
+    color: #409EFF;
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 0.8rem 2.2rem;
+    font-size: 1.08rem;
+    text-decoration: none;
+    margin-top: 0.5rem;
+    transition: background 0.18s, color 0.18s;
+  }
+  .call-to-action-bottom .cta-button:hover {
+    background: #e6f0fa;
+    color: #1769c2;
+  }
+</style> 
