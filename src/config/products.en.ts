@@ -19,7 +19,7 @@ export const products: Product[] = [
     tagline: "30+ handy tools at your right-click. Boost your Mac productivity with a customizable context menu for everyone.",
     description: "MouseBoost is a powerful productivity tool that enhances your Mac's right-click menu with over 30 useful tools. Create files, access favorite folders, launch apps, and run custom scripts - all from your context menu.",
     icon: "/icons/mouseboost-icon.png",
-    url: "/en/products/mouseboost",
+    url: "/en/products/mouseboost/info",
     appStoreUrl: "https://apps.apple.com/app/id1551462255?mt=8",
     features: [
       {
@@ -46,7 +46,7 @@ export const products: Product[] = [
     tagline: "Smart & Versatile eBook Reader, AI-powered, supports all major formats, and designed for efficiency.",
     description: "A Powerful AI-Enhanced Reading Experience. OmniReader is a feature-rich book reader designed for users who demand flexibility, efficiency, and intelligence in their reading experience. With broad format support, AI-powered assistance, and advanced customization options, it's the ultimate tool for reading and managing digital content.",
     icon: "/icons/omnireader-icon.png",
-    url: "/en/products/omnireader",
+    url: "/en/products/omnireader/info",
     appStoreUrl: "https://apps.apple.com/app/id1510511137?mt=8",
     features: [
       {
@@ -73,7 +73,7 @@ export const products: Product[] = [
     tagline: "A super decompression tool, supports the decompression of RAR, 7Z, ZIP, TAR, GZIP and other more than 100 formats of files. As long as the compressed package, there is nothing OmniZip can not decompress.",
     description: "OmniZip is a powerful file compression and extraction tool that supports over 100 different archive formats. Whether you're dealing with RAR, 7Z, ZIP, TAR, GZIP, or any other compressed file format, OmniZip has you covered.",
     icon: "/icons/omnizip-icon.png",
-    url: "/en/products/omnizip",
+    url: "/en/products/omnizip/info",
     appStoreUrl: "https://apps.apple.com/app/id6446939321?mt=8",
     features: [
       {
@@ -100,7 +100,7 @@ export const products: Product[] = [
     tagline: "Transform your documents between PDF, EPUB, FB2, RTF, TXT, CHM, MOBI, AZW, and DJVU with lightning speed. Your complete e-book conversion solution.",
     description: "Your go-to e-book conversion tool, seamlessly transforming documents between multiple formats. Whether it's academic papers or novels, OmniConverter makes your reading experience uninterrupted across formats.",
     icon: "/icons/omniconverter-icon.png",
-    url: "/en/products/omniconverter",
+    url: "/en/products/omniconverter/info",
     appStoreUrl: "https://apps.apple.com/app/id6499086601?mt=8",
     features: [
       {
@@ -127,7 +127,7 @@ export const products: Product[] = [
     tagline: "A powerful PDF reader with bookshelves, reading progress tracking, annotations, TTS, and immersive reading mode.",
     description: "CogniPDF X is a feature-rich PDF reader designed for both casual and professional users. With its intuitive interface and powerful features, it makes reading and managing PDF documents a breeze.",
     icon: "/icons/cognipdf-icon.png",
-    url: "/en/products/cognipdf",
+    url: "/en/products/cognipdf/info",
     appStoreUrl: "https://apps.apple.com/app/id6496689357?mt=8",
     features: [
       {
@@ -154,7 +154,7 @@ export const products: Product[] = [
     tagline: "A simple and powerful TXT/EPUB reader with bookshelves, reading progress tracking, themes, TTS, and immersive reading mode.",
     description: "TXT Reader is a versatile text reader that combines simplicity with powerful features. Perfect for reading plain text files and EPUB books with a focus on user experience.",
     icon: "/icons/textreader-icon.png",
-    url: "/en/products/textreader",
+    url: "/en/products/textreader/info",
     appStoreUrl: "https://apps.apple.com/app/id1669005649?mt=8",
     features: [
       {

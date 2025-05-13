@@ -1,7 +1,7 @@
 ---
-import { getProducts } from "../../../config/products";
+import { getProducts } from "@/config/products";
 const products = getProducts(Astro.url.href);
-import MainLayout from "../../../layouts/MainLayout.astro";
+import MainLayout from "@/layouts/MainLayout.astro";
 
 const product = products.find(p => p.id === "omnizip");
 if (!product) {
@@ -10,7 +10,7 @@ if (!product) {
 ---
 
 <MainLayout
-  title="OmniZip - 智能压缩解压工具"
+  title="OmniZip - 强大的解压与压缩工具"
   description="一款功能强大的压缩解压工具，支持多种压缩格式，具有智能压缩、加密保护、批量处理等功能。您的完整文件压缩解决方案。"
 >
   <div class="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900 dark:to-primary-800">

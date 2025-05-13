@@ -1,9 +1,9 @@
 ---
 // src/pages/zh/index.astro
-import MainLayout from "../../layouts/MainLayout.astro";
-import ProductCard from "../../components/ProductCard.astro";
-import Features from "../../components/Features.astro";
-import { getProducts } from "../../config/products";
+import MainLayout from "@/layouts/MainLayout.astro";
+import ProductCard from "@/components/ProductCard.astro";
+import Features from "@/components/Features.astro";
+import { getProducts } from "@/config/products";
 const products = getProducts(Astro.url.href);
 ---
 

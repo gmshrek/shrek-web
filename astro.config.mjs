@@ -11,6 +11,11 @@ export default defineConfig({
     build: {
       cssMinify: true,
     },
+    resolve: {
+      alias: {
+        '@': '/src'
+      }
+    }
   },
   i18n: {
     defaultLocale: "en",

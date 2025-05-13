@@ -23,12 +23,26 @@ const brandName = "GM Shrek";
           {/* 这个 a 标签本身不应该控制显示，而是父 li:hover 控制 */}
           <ul class="dropdown-menu">
             {/* 下拉菜单 */}
-            <li><a href={`/${lang}/products/omnireader`}>{t('products.omnireader')}</a></li>
-            <li><a href={`/${lang}/products/mouseboost`}>{t('products.mouseboost')}</a></li>
-            <li><a href={`/${lang}/products/omnizip`}>{t('products.omnizip')}</a></li>
-            <li><a href={`/${lang}/products/omniconverter`}>{t('products.omniconverter')}</a></li>
-            <li><a href={`/${lang}/products/cognipdf`}>{t('products.cognipdf')}</a></li>
-            <li><a href={`/${lang}/products/textreader`}>{t('products.textreader')}</a></li>
+            <li><a href={`/${lang}/products/omnireader/info`}>{t('products.omnireader')}</a></li>
+            <li><a href={`/${lang}/products/mouseboost/info`}>{t('products.mouseboost')}</a></li>
+            <li><a href={`/${lang}/products/omnizip/info`}>{t('products.omnizip')}</a></li>
+            <li><a href={`/${lang}/products/omniconverter/info`}>{t('products.omniconverter')}</a></li>
+            <li><a href={`/${lang}/products/cognipdf/info`}>{t('products.cognipdf')}</a></li>
+            <li><a href={`/${lang}/products/textreader/info`}>{t('products.textreader')}</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          {/* 父元素 */}
+          <a href="#">{t('nav.faq')}</a>
+          {/* 这个 a 标签本身不应该控制显示，而是父 li:hover 控制 */}
+          <ul class="dropdown-menu">
+            {/* 下拉菜单 */}
+            <li><a href={`/${lang}/products/omnireader/faq`}>{t('products.omnireader')}</a></li>
+            <li><a href={`/${lang}/products/mouseboost/faq`}>{t('products.mouseboost')}</a></li>
+            <li><a href={`/${lang}/products/omnizip/faq`}>{t('products.omnizip')}</a></li>
+            <li><a href={`/${lang}/products/omniconverter/faq`}>{t('products.omniconverter')}</a></li>
+            <li><a href={`/${lang}/products/cognipdf/faq`}>{t('products.cognipdf')}</a></li>
+            <li><a href={`/${lang}/products/textreader/faq`}>{t('products.textreader')}</a></li>
           </ul>
         </li>
         <li><a href={`/${lang}/feedback`}>{t('nav.feedback')}</a></li>

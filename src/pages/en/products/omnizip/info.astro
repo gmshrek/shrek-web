@@ -1,7 +1,7 @@
 ---
-import { getProducts } from "../../../config/products";
+import { getProducts } from "@/config/products";
 const products = getProducts(Astro.url.href);
-import MainLayout from "../../../layouts/MainLayout.astro";
+import MainLayout from "@/layouts/MainLayout.astro";
 
 const product = products.find(p => p.id === "omnizip");
 if (!product) {
