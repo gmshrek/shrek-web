@@ -150,9 +150,9 @@ export const products: Product[] = [
   },
   {
     id: "textreader",
-    name: "TXT Reader",
+    name: "Ark Reader",
     tagline: "一款简单而强大的 TXT/EPUB 阅读器，具有书架、阅读进度跟踪、主题、文字转语音和沉浸式阅读模式。",
-    description: "TXT Reader 是一款多功能文本阅读器，将简单性与强大功能完美结合。专注于用户体验，是阅读纯文本文件和 EPUB 电子书的理想选择。",
+    description: "Ark Reader 是一款多功能文本阅读器，将简单性与强大功能完美结合。专注于用户体验，是阅读纯文本文件和 EPUB 电子书的理想选择。",
     icon: "/icons/textreader-icon.png",
     url: "/zh/products/textreader/info",
     appStoreUrl: "https://apps.apple.com/app/id1669005649?mt=8",
